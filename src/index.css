@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #F8F7F2; /* Creamy white from poster */
+    --color-surface: #FFFFFF;
+    --color-primary: #1C1C1C; /* Black from poster */
+    --color-secondary: #6A603C; /* Olive from poster */
+    --color-border: #EAE8E1;
+    --color-accent: #BDBBDD; /* Lavender from poster */
+    --color-accent-hover: #8A87B1; /* Darker lavender */
+  }
+
+  .dark {
+    --color-bg: #1C1C1C;
+    --color-surface: #2A2A2A;
+    --color-primary: #F8F7F2;
+    --color-secondary: #BDBBDD;
+    --color-border: #3A3A3A;
+    --color-accent: #BDBBDD;
+    --color-accent-hover: #8A87B1;
+  }
+
+  body {
+    @apply bg-bg text-primary transition-colors duration-300;
+  }
+  /* For Firefox */
+  .scrollbar-hide {
+    scrollbar-width: none;
+  }
+  /* For Chrome, Safari, and Opera */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
